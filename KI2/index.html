@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunjungan Industri 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.animated-background {
+    position: relative;
+    display: inline-block;
+    color: green;
+    font-size: 2.5em; /* Ukuran teks */
+    font-weight: bold;
+    padding: 10px 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animated-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('alirsyad.jpg'); /* Ganti dengan gambar yang diinginkan */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: moveBackground 10s infinite linear; /* Menambahkan animasi untuk background gambar */
+}
+
+/* Animasi untuk menggerakkan gambar */
+@keyframes moveBackground {
+    0% {
+        background-position: center;
+    }
+    100% {
+        background-position: 100% 100%; /* Gambar bergerak ke kanan bawah */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="skinfa1.jpg" alt="Logo 1" class="logo">
+            <img src="chloerine1.jpg" alt="Logo 2" class="logo">
+            <img src="unikom2.jpg" alt="Logo 3" class="logo">
+        </div>
+        <h1>Kunjungan Industri 2025</h1>
+        <nav>
+            <ul>
+                <li><a href="persiapan.html">Persiapan Keberangkatan</a></li>
+                <li><a href="chlorine.html">PT Chlorine Digital Media</a></li>
+                <li><a href="unikom.html">UNIKOM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="animated-background">Selamat Datang!</h2>
+            <p>Halaman ini menyajikan laporan perjalanan kunjungan industri kelas X RPL 2025 ke PT Chlorine Digital Media dan Universitas Komputer Indonesia (UNIKOM). Ikuti cerita kami melalui setiap halaman!</p>
+        </section>
+        <img src="ki1.jpg" alt="Foto Kunjungan Industri" class="main-image">
+    </main>
+    <footer>
+        <p>&copy; 2025 Kelas X RPL</p>
+    </footer>
+</body>
+</html>

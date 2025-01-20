@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persiapan Keberangkatan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .animated-background {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 2.5em; /* Ukuran teks */
+    font-weight: bold;
+    padding: 10px 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animated-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logoskinfa.jpg'); /* Ganti dengan gambar yang diinginkan */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: moveBackground 10s infinite linear; /* Menambahkan animasi untuk background gambar */
+}
+
+/* Animasi untuk menggerakkan gambar */
+@keyframes moveBackground {
+    0% {
+        background-position: center;
+    }
+    100% {
+        background-position: 100% 100%; /* Gambar bergerak ke kanan bawah */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="skinfa1.jpg" alt="Logo 1" class="logo">
+            <img src="chloerine1.jpg" alt="Logo 2" class="logo">
+            <img src="unikom2.jpg" alt="Logo 3" class="logo">
+        </div>
+        <h1>Persiapan Keberangkatan</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="chlorine.html">PT Chlorine Digital Media</a></li>
+                <li><a href="unikom.html">UNIKOM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="animated-background">Persiapan Keberangkatan</h2>
+            <p>Seluruh siswa mempersiapkan keberangkatan dengan antusias.kami berangkat ke sekolah dan sampai disekolah pukul 4:00, sebelum berangkat kami sholat terlebih dahulu dan sebelum masuk ke dalam bus siswa siswa di check tas nya serta absensi</p>
+            <img src="persiapan.jpg" alt="Foto Persiapan" class="main-image">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Kelas X RPL</p>
+    </footer>
+</body>
+</html>

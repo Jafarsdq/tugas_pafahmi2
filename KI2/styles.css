@@ -1,0 +1,201 @@
+/* Mengatur margin dan padding secara global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global font dan body */
+body {
+    font-family: 'Roboto', sans-serif;  /* Menggunakan font Roboto */
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    animation: slideIn 1s ease-out; /* Animasi header masuk dari atas */
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    width: 100px;  /* Perbesar ukuran logo */
+    height: 100px;  /* Menyesuaikan proporsi */
+    border-radius: 10px;
+    border: 3px solid black;  /* Menambahkan border putih untuk menonjolkan logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Bayangan halus di sekitar logo untuk kedalaman */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.separator {
+    width: 2px; /* Lebar garis pemisah */
+    height: 50px; /* Tinggi garis pemisah */
+    background-color: #000; /* Warna garis pemisah (hitam) */
+    margin: 0 10px; /* Jarak antara logo dan pemisah */
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.1);  /* Membesarkan logo saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Bayangan lebih kuat saat hover */
+}
+
+/* Menambahkan gambar logo dengan background putih untuk kejelasan */
+.logo-container img {
+    object-fit: contain;  /* Menjaga proporsi gambar agar tidak terdistorsi */
+    background-color: black;  /* Menambahkan latar belakang putih agar logo lebih jelas */
+}
+
+/* Navigation styling */
+/* Styling dasar navigasi */
+nav {
+    background-color: black;
+    padding: 5px 0;  /* Mengurangi padding untuk membuat navbar lebih kecil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;  /* Menghapus margin pada ul */
+    padding: 0;  /* Menghapus padding pada ul */
+}
+
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;  /* Menambahkan animasi perubahan warna */
+}
+
+/* Efek hover */
+nav ul li a:hover {
+    color: #ffcc00; /* Warna teks saat hover */
+    background-color: rgba(255, 204, 0, 0.2); /* Latar belakang sedikit kuning saat hover */
+}
+
+/* Menambahkan efek ketika link ditekan (active state) */
+nav ul li a:active {
+    color: #003366; /* Ubah warna teks saat link diklik */
+    background-color: #ffcc00; /* Ubah latar belakang saat link diklik */
+    transition: background-color 0.2s ease-out; /* Animasi transisi yang lebih cepat saat ditekan */
+}
+
+
+/* Main content styling */
+main {
+    animation: fadeIn 2s ease-in forwards;
+    opacity: 1,1; /* Mulai dengan elemen tak terlihat */
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Footer Styling */
+footer {
+    animation: fadeIn 2s ease-in forwards;
+    opacity: 1,1;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-left: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
